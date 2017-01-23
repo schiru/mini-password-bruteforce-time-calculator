@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+    font-family: Arial;
+}
+
+#content {
+    margin-top: 50px;
+}
+
+input {
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+input#submit {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    margin-left: 10px;
+    display: inline-block;
+    border: 1px solid #0055aa;
+    background-color: #0066bb;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+input#submit:focus,
+input#submit:hover {
+    background-color: #0077cc;
+}
+
+input#password {
+    width: 250px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.score {
+    padding-top: 50px;
+}

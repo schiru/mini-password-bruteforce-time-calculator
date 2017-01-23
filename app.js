@@ -35,7 +35,7 @@ app.route(['/','index']).get((req, res) => {
         score = BruteforceCalculator.calculateCrackTime(password);
     }
 
-    res.render('index', {title: title, score: score})
+    res.render('index', {title: title, score: score, password: password})
 })
 
 app.listen(port, () => {

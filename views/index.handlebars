@@ -1,10 +1,17 @@
-<h1>How secure is my password?</h1>
+<div id="content">
+    <h1>How secure is my password?</h1>
 
-<form method="POST">
-    <input id="password" name="password" type="text" />
-    <input type="submit" value="Check" />
-</form>
+    <form method="POST">
+        <p>
+            <input id="password" autocomplete="off" autofocus="autofocus" name="password" placeholder="My super secure password" type="text" />
+            <input id="submit" type="submit" value="Check" />
+        </p>
+    </form>
 
-{{#if score}}
-    Your password could be cracked using brute-force in {{score}} seconds.
-{{/if}}
+    {{#if score}}
+    <div class="score"
+        <p>"{{password}}" could be brute-forced in</p>
+        <h2>{{score}} seconds.</h2>
+    </div>
+    {{/if}}
+</div>
