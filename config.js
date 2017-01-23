@@ -4,6 +4,10 @@ config.server = {
     port: 8080
 }
 
+config.app = {
+    title: "How secure is my password?"
+}
+
 config.calculator = {
     calculationsPerSecond: 10e9,
 

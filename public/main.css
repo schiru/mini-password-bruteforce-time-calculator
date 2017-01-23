@@ -13,6 +13,26 @@ input {
     font-size: 1em;
 }
 
+.suggestions {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.suggestions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestions a {
+    color: #0066bb;
+}
+
+.suggestions ul li {
+    padding: 5px;
+}
+
 input#submit {
     padding-left: 25px;
     padding-right: 25px;
@@ -32,7 +52,7 @@ input#submit:hover {
 }
 
 input#password {
-    width: 250px;
+    width: 300px;
     outline: none;
     border: 1px solid #ccc;
 }

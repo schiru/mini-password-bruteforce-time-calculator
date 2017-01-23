@@ -3,9 +3,20 @@
 
     <form method="POST">
         <p>
-            <input id="password" autocomplete="off" autofocus="autofocus" name="password" placeholder="My super secure password" type="text" />
+            <input id="password" autocomplete="off" autofocus="autofocus" name="password" placeholder="Enter your super secure password" type="text" />
             <input id="submit" type="submit" value="Check" />
         </p>
+
+        <div class="suggestions">
+            <p>
+                or try one of these nifty (yet sadly very common) ones:
+                <ul>
+                    <li><a href="?p=password">password</a></li>
+                    <li><a href="?p=passw0rd">passw0rd</a></li>
+                    <li><a href="?p=password1234">password1234</a></li>
+                </ul>
+            </p>
+        </div>
     </form>
 
     {{#if score}}
