@@ -9,6 +9,8 @@
   "author": "Thomas Jirout",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
   }
 }

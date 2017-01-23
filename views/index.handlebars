@@ -1,0 +1,10 @@
+<h1>How secure is my password?</h1>
+
+<form method="POST">
+    <input id="password" name="password" type="text" />
+    <input type="submit" value="Check" />
+</form>
+
+{{#if score}}
+    Your password could be cracked using brute-force in {{score}} seconds.
+{{/if}}
