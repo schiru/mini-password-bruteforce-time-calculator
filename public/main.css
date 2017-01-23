@@ -11,6 +11,9 @@ input {
     border-radius: 3px;
     padding: 10px;
     font-size: 1em;
+
+    /* disable iOS-specific style */
+    -webkit-appearance: none;
 }
 
 .suggestions {
