@@ -1,0 +1,14 @@
+{
+  "name": "mini-password-cracktime-calculator",
+  "version": "1.0.0",
+  "description": "Calculates an estimated time required to crack a given password",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js test"
+  },
+  "author": "Thomas Jirout",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
