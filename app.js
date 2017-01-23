@@ -1,0 +1,1 @@
+const BruteforceCalculator = require('./BruteforceCalculator');
