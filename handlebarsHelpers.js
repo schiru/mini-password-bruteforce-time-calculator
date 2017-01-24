@@ -8,6 +8,11 @@ helpers.scoreSeconds = (score) => {
     return "(" + score + pluralify(score, ' second', ' seconds') + ")";
 }
 
+/**
+ * Converts the score to human readable format, e.g. '2 years, 1 month, 23 days'
+ * @param  {number} score score in seconds
+ * @return {string} score, human readable
+ */
 helpers.prettyScore = (score) => {
     let seconds = score % 60;
     let minutes = Math.floor(score/60) % 60;
