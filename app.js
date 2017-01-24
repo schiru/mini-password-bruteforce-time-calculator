@@ -24,10 +24,11 @@ app.use(express.static('public'));
 
 // === Routing and request handling
 app.route(['/','index']).get((req, res) => {
-    let password = req.query.p || '';
+    let password = null;
     let score = null;
 
-    if (password != '') {
+    if (typeof req.query.p == 'string' && req.query.p != '') {
+        password = req.query.p;
         score = BruteforceCalculator.calculateBruteforceTime(password);
     }
 
