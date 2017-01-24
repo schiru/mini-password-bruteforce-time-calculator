@@ -1,3 +1,4 @@
+// Run the app using `node app test` to start testtool
 if (process.argv[2] == 'test') {
     const Testtool = require('./Tests');
     Testtool.runTests();
@@ -18,14 +19,13 @@ const title = config.app.title;
 app.engine('handlebars', handlebars({defaultLayout: 'main', helpers: handlebarsHelpers}));
 app.set('view engine', 'handlebars');
 
-// Automatically serve static files like css, js,...
+// Automatically serve static files located in 'public' directory
 app.use(express.static('public'));
 
 // === Routing and request handling
 app.route(['/','index']).get((req, res) => {
-    let password = req.query.p || "";
-
-    let score = null
+    let password = req.query.p || '';
+    let score = null;
 
     if (password != '') {
         score = BruteforceCalculator.calculateBruteforceTime(password);
