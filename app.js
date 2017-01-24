@@ -26,9 +26,8 @@ app.use(express.static('public'));
 
 // Routing and request handling
 app.route(['/','index']).get((req, res) => {
-    res.render('index', {title: title});
-}).post((req, res) => {
-    let password = req.body.password || "";
+    let password = req.query.p || "";
+
     let score = null
 
     if (password != '') {
@@ -36,7 +35,7 @@ app.route(['/','index']).get((req, res) => {
     }
 
     res.render('index', {title: title, score: score, password: password})
-})
+});
 
 app.listen(port, () => {
     console.log(`App is now listening on port ${port}`);

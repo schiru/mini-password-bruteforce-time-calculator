@@ -54,7 +54,7 @@ input#submit:hover {
     background-color: #0077cc;
 }
 
-input#password {
+input#p {
     width: 300px;
     outline: none;
     border: 1px solid #ccc;
