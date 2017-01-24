@@ -20,7 +20,9 @@ Note: you can adjust the listen port in config.js
 ### Configuration
 
 In the config.js you can configure:
-- estimated computation speed of a brute-force machine 
+- App listen port
+- Title of app
+- Estimated computation speed of a brute-force machine 
 - Regex tests for certain character groups and their impact on possibilities per character 
 
 ### Tests 
