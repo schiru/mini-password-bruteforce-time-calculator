@@ -3,9 +3,16 @@
 
     <form method="GET">
         <p>
-            <input id="p" autocomplete="off" autofocus="autofocus" name="p" placeholder="Enter your super secure password" type="text" />
+            <input id="p" autocomplete="off" autofocus="autofocus" name="p" placeholder="Enter a super secure password" type="text" />
             <input id="submit" type="submit" value="Check" />
         </p>
+
+        {{#if score}}
+        <div class="score"
+            <p>"{{password}}" could be brute-forced in</p>
+            <h2>{{score}} seconds.</h2>
+        </div>
+        {{/if}}
 
         <div class="suggestions">
             <p>
@@ -19,10 +26,4 @@
         </div>
     </form>
 
-    {{#if score}}
-    <div class="score"
-        <p>"{{password}}" could be brute-forced in</p>
-        <h2>{{score}} seconds.</h2>
-    </div>
-    {{/if}}
 </div>
