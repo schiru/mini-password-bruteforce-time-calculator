@@ -7,7 +7,7 @@ A mini web app that calculates the estimated time it would require to brute forc
 - Templating engine Handlebars.js
 
 ### Requirements
-- [node.js and npm](http://nodejs.org) (comes bundled together)
+- [node.js (v >= 6.9.2) and npm](http://nodejs.org) (comes bundled together)
 
 ### Setup
 1. clone repo
@@ -22,14 +22,14 @@ Note: you can adjust the listen port in config.js
 In the config.js you can configure:
 - App listen port
 - Title of app
-- Estimated computation speed of a brute-force machine 
-- Regex tests for certain character groups and their impact on possibilities per character 
+- Estimated computation speed of a brute-force machine
+- Regex tests for certain character groups and their impact on possibilities per character
 
-### Tests 
+### Tests
 Tests for the brute force calculation can be run using ```node app test```.
 
 ### About this simulation
-The simulation detects which character groups are included in your password and assumes that a brute forcer would only use these character groups to guess the password. 
+The simulation detects which character groups are included in your password and assumes that a brute forcer would only use these character groups to guess the password.
 
 E.g. if the given password was 'abC' it's assumed that the brute-forcer would only test for lower and uppercase characters.
 
@@ -37,7 +37,7 @@ This way, a real brute forcer would likely tale longer because it would check fo
 
 Note that there are other methods - like dictionary attacks - that may deliver way faster guessing results.
 
-### Author 
+### Author
 [schiru](http://schiru.com)
 
 ### Licence

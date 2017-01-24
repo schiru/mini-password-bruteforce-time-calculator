@@ -20,11 +20,10 @@ function calculatePossibilitiesPerCharacter(password) {
 }
 
 /**
- * Calculates the time required to brute-force the given password
+ * Calculates the time required to brute-force the given password in seconds
  */
 module.exports.calculateBruteforceTime = (password) => {
     let possibilities = calculatePossibilitiesPerCharacter(password);
-    // console.log(`possibilities: ${possibilities}`);
 
     return Math.pow(possibilities, password.length) / config.calculator.calculationsPerSecond;
 }
