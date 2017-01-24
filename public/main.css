@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
 #content {
@@ -14,10 +14,10 @@ input {
 
     display: block;
     width: 100%;
+    box-sizing: border-box;
 
     /* disable iOS-specific style */
     -webkit-appearance: none;
-    box-sizing: border-box;
 }
 
 form p {
@@ -25,7 +25,6 @@ form p {
 }
 
 .suggestions {
-    /*width: 500px;*/
     margin: 0 auto;
     margin-top: 50px;
 }
@@ -60,7 +59,6 @@ input#submit:hover {
 }
 
 input#p {
-    /*width: 300px;*/
     outline: none;
     border: 1px solid #ccc;
 }
