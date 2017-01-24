@@ -13,9 +13,9 @@ function test(title, expectedResult, actualResult) {
 }
 
 module.exports.runTests = () => {
-    test('a', 2.6e-9, BruteforceCalculator.calculateCrackTime('a'));
-    test('aB', 2.704e-7, BruteforceCalculator.calculateCrackTime('aB'));
-    test('ab1', 0.0000238328, BruteforceCalculator.calculateCrackTime('aB1'));
-    test('ab1!', 0.0081450625, BruteforceCalculator.calculateCrackTime('aB1!'));
-    test('Cabbag3!', 663420.4312890625,  BruteforceCalculator.calculateCrackTime('Cabbag3!'));
+    test('a', 2.6e-9, BruteforceCalculator.calculateBruteforceTime('a'));
+    test('aB', 2.704e-7, BruteforceCalculator.calculateBruteforceTime('aB'));
+    test('ab1', 0.0000238328, BruteforceCalculator.calculateBruteforceTime('aB1'));
+    test('ab1!', 0.0081450625, BruteforceCalculator.calculateBruteforceTime('aB1!'));
+    test('Cabbag3!', 663420.4312890625,  BruteforceCalculator.calculateBruteforceTime('Cabbag3!'));
 }

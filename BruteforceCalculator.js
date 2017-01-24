@@ -2,9 +2,9 @@ const config = require.main.require('./config');
 
 /**
  * Calculates the number of possibilities per character
- * based on what kind of characters are included in the password.
+ * based on what kind of characters are included in the given password.
  *
- * For "abc" the possibilities per character would be 26, whereas for "abc1" the pbc would be 36
+ * For "abc", the possibilities per character would be 26, whereas for "abc1" the pbc would be 36
  */
 function calculatePossibilitiesPerCharacter(password) {
     let possibilities = 0;
@@ -20,9 +20,9 @@ function calculatePossibilitiesPerCharacter(password) {
 }
 
 /**
- * Calculates the time required to crack the given password
+ * Calculates the time required to brute-force the given password
  */
-module.exports.calculateCrackTime = (password) => {
+module.exports.calculateBruteforceTime = (password) => {
     let possibilities = calculatePossibilitiesPerCharacter(password);
     // console.log(`possibilities: ${possibilities}`);
 
