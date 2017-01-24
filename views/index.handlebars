@@ -3,14 +3,15 @@
 
     <form method="GET">
         <p>
-            <input id="p" autocomplete="off" autofocus="autofocus" name="p" placeholder="Enter a super secure password" type="text" />
+            <input id="p" autocomplete="off" autofocus="autofocus" name="p" placeholder="Enter a super secure password" value="{{password}}" type="text" />
             <input id="submit" type="submit" value="Check" />
         </p>
 
         {{#if score}}
         <div class="score"
-            <p>"{{password}}" could be brute-forced in</p>
-            <h2>{{score}} seconds.</h2>
+            <p><b>"{{password}}"</b> could be brute-forced in about</p>
+            <h2>{{prettyScore score}}</h2>
+            <p>That's {{score}} seconds</p>
         </div>
         {{/if}}
 
@@ -27,3 +28,11 @@
     </form>
 
 </div>
+
+<script>
+    // Position cursor at the end of the input field after page reload
+    setTimeout(() => {
+        let input = document.querySelector('#p');
+        input.selectionStart = input.selectionEnd = input.value.length;
+    },0);
+</script>

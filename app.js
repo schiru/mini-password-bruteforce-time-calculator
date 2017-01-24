@@ -3,6 +3,7 @@ const config = require('./config');
 const express = require('express');
 const bodyParser = require('body-parser');
 const handlebars = require('express-handlebars');
+const handlebarsHelpers = require('./handlebarsHelpers');
 
 // console.log(BruteforceCalculator.calculateCrackTime("a"));
 // console.log(BruteforceCalculator.calculateCrackTime("aB"));
@@ -15,7 +16,7 @@ let app = express();
 let port = config.server.port;
 const title = config.app.title;
 
-app.engine('handlebars', handlebars({defaultLayout: 'main'}));
+app.engine('handlebars', handlebars({defaultLayout: 'main', helpers: handlebarsHelpers}));
 app.set('view engine', 'handlebars');
 
 // Use expressjs bodyParser to parse form data
