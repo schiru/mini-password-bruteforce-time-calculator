@@ -1,9 +1,17 @@
+if (process.argv[2] == 'test') {
+    const Testtool = require('./Tests');
+    Testtool.runTests();
+    return;
+}
+
 const BruteforceCalculator = require('./BruteforceCalculator');
 const config = require('./config');
 const express = require('express');
 const bodyParser = require('body-parser');
 const handlebars = require('express-handlebars');
 const handlebarsHelpers = require('./handlebarsHelpers');
+
+
 
 // console.log(BruteforceCalculator.calculateCrackTime("a"));
 // console.log(BruteforceCalculator.calculateCrackTime("aB"));

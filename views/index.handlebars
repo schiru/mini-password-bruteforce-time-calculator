@@ -11,17 +11,19 @@
         <div class="score"
             <p><b>"{{password}}"</b> could be brute-forced in about</p>
             <h2>{{prettyScore score}}</h2>
-            <p>That's {{score}} seconds</p>
+            <p>{{scoreSeconds score}}</p>
         </div>
         {{/if}}
 
         <div class="suggestions">
             <p>
-                or try one of these nifty (yet sadly very common) ones:
+                or try one of these nifty (and sadly <a href="http://wpengine.com/unmasked/" target="_blank">very common</a>) ones:
                 <ul>
                     <li><a href="?p=password">password</a></li>
                     <li><a href="?p=passw0rd">passw0rd</a></li>
-                    <li><a href="?p=password1234">password1234</a></li>
+                    <li><a href="?p=abc123">abc123</a></li>
+                    <li><a href="?p=1234567890">1234567890</a></li>
+                    <li><a href="?p=querty">qwerty</a></li>
                 </ul>
             </p>
         </div>

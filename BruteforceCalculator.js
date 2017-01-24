@@ -11,7 +11,7 @@ function calculatePossibilitiesPerCharacter(password) {
 
     config.calculator.tests.forEach((test) => {
         if (password.match(test.regex) != null) {
-            console.log(`matches group: ${test.title}`);
+            // console.log(`matches group: ${test.title}`);
             possibilities += test.addsPossibilities;
         }
     });
@@ -24,7 +24,7 @@ function calculatePossibilitiesPerCharacter(password) {
  */
 module.exports.calculateCrackTime = (password) => {
     let possibilities = calculatePossibilitiesPerCharacter(password);
-    console.log(`possibilities: ${possibilities}`);
+    // console.log(`possibilities: ${possibilities}`);
 
     return Math.pow(possibilities, password.length) / config.calculator.calculationsPerSecond;
 }

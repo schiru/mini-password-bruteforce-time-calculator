@@ -1,7 +1,11 @@
 let helpers = {}
 
-function pluralify(str, n) {
-    return str == 1 ? str : str + 's';
+function pluralify(n, singular, plural) {
+    return n == 1 ? singular : plural;
+}
+
+helpers.scoreSeconds = (score) => {
+    return "(" + score + pluralify(score, ' second', ' seconds') + ")";
 }
 
 helpers.prettyScore = (score) => {
@@ -14,19 +18,19 @@ helpers.prettyScore = (score) => {
     let fields = [];
 
     if (years > 0) {
-        fields.push(years + ' ' + pluralify('year', years));
+        fields.push(years + ' ' + pluralify(years, 'year', 'years'));
     }
 
     if (days > 0) {
-        fields.push(days + ' ' + pluralify('day', days));
+        fields.push(days + ' ' + pluralify(days, 'day', 'days'));
     }
 
     if (hours > 0) {
-        fields.push(hours + ' ' + pluralify('hour', hours));
+        fields.push(hours + ' ' + pluralify(hours, 'hour', 'hours'));
     }
 
     if (minutes > 0) {
-        fields.push(minutes + ' ' + pluralify('minute', minutes));
+        fields.push(minutes + ' ' + pluralify(minutes, 'minute', 'minutes'));
     }
 
     if (seconds > 0) {
@@ -35,7 +39,7 @@ helpers.prettyScore = (score) => {
             fields.push('less than one second');
         } else {
             seconds = Math.floor(seconds);
-            fields.push(seconds + ' ' + pluralify('second', seconds));
+            fields.push(seconds + ' ' + pluralify(seconds, 'second', 'seconds'));
         }
     }
 
