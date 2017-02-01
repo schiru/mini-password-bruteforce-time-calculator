@@ -14,6 +14,7 @@ const handlebarsHelpers = require('./handlebarsHelpers');
 // === App initialization
 let app = express();
 let port = config.server.port;
+let hostname = config.server.hostname;
 const title = config.app.title;
 
 app.engine('handlebars', handlebars({defaultLayout: 'main', helpers: handlebarsHelpers}));
@@ -35,6 +36,6 @@ app.route(['/','index']).get((req, res) => {
     res.render('index', {title: title, score: score, password: password})
 });
 
-app.listen(port, () => {
+app.listen(port, hostname, () => {
     console.log(`App is now listening on port ${port}`);
 });
