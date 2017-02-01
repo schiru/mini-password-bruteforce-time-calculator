@@ -20,10 +20,11 @@ Note: you can adjust the listen port in config.js
 ### Configuration
 
 In the config.js you can configure:
-- App listen port
-- Title of app
-- Estimated computation speed of a brute-force machine
-- Regex tests for certain character groups and their impact on possibilities per character
+- server listen port
+- server hostname
+- title of app
+- estimated computation speed of a brute-force machine
+- regex tests for certain character groups and their impact on possibilities per character
 
 ### Tests
 Tests for the brute force calculation can be run using ```node app test```.
